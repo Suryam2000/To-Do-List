@@ -5,42 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
-    <h1>TODO App</h1>
+    <div id="heading">
+        <h1>TODO App</h1>
+    </div>
 
     <form action="">
 
-        <div>
-            <label for="description">DESCRIPTION</label>
+        <div id="description">
+            <div>
+                <label for="description">DESCRIPTION</label>
+            </div>
+            <div>
+                <input type="text" name="description" placeholder="What do you need to do?">
+            </div>
         </div>
-        <div>
-            <input type="text" name="description" placeholder="What do you need to do?">
-        </div>
 
 
-        <div>
+        <div id="container2">
             <div>
-                <label for="category">CATEGORY</label>
+                <div>
+                    <label for="category">CATEGORY</label>
+                </div>
+                <div>
+                    <select name="category" id="category">
+                        <option value="Choose a Category">Choose a Category</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <select name="category" id="category">
-                    <option value="Choose a Category">Choose a Category</option>
-                    <option value="personal">Personal</option>
-                    <option value="work">Work</option>
-                    <option value="school">School</option>
-                    <option value="cleaning">Cleaning</option>
-                    <option value="others">Others</option>
-                </select>
-            </div>
 
 
             <div>
-                <label for="date">DUE DATE</label>
-            </div>
-            <div>
-                <input type="date" name="date" id="date">
+                <div>
+                    <label for="date">DUE DATE</label>
+                </div>
+                <div>
+                    <input type="date" name="date" id="date">
+                </div>
             </div>
 
         </div>
