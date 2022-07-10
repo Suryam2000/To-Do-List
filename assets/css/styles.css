@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    padding: 0;
+    padding: 0 20vw;
 }
 
 #heading{
@@ -9,7 +9,13 @@ body{
 }
 
 #description{
-    border: 2px solid gray;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    padding: 10px 0px 20px 10px;
+}
+
+#description input{
+    width: 100%;
 }
 
 input,select{
@@ -23,4 +29,41 @@ input:focus{
 #container2{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+#category-box,#date-box{
+    width: 50%;
+    padding: 10px 10px 20px 10px;
+    border-bottom: 2px solid gray;
+}
+
+#category-box{
+    border-right: 2px solid gray;
+}
+
+#category-box select{
+    width: 100%;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    padding: 10px;
+    margin: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button i{
+    margin: 0px 5px;
+}
+
+#list-box{
+    border: 2px solid gray;
 }

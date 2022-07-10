@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
 
 
         <div id="container2">
-            <div>
+            <div id="category-box">
                 <div>
                     <label for="category">CATEGORY</label>
                 </div>
@@ -44,7 +45,7 @@
             </div>
 
 
-            <div>
+            <div id="date-box">
                 <div>
                     <label for="date">DUE DATE</label>
                 </div>
@@ -55,10 +56,14 @@
 
         </div>
 
-        <div>
-            <button>ADD TASK</button>
-            <button>DELETE TASK</button>
+        <div id="buttons">
+            <button><i class="fa-solid fa-plus"></i> ADD TASK</button>
+            <button><i class="fa-solid fa-trash-can"></i> DELETE TASK</button>
         </div>
     </form>
+
+    <div id="list-box">
+
+    </div>
 </body>
 </html>
