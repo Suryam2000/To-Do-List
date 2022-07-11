@@ -15,7 +15,7 @@
         <h1>TODO App</h1>
     </div>
 
-    <form action="">
+    <form action="/create_list" method="post">
 
         <div id="description">
             <div>
@@ -57,13 +57,25 @@
         </div>
 
         <div id="buttons">
-            <button><i class="fa-solid fa-plus"></i> ADD TASK</button>
-            <button><i class="fa-solid fa-trash-can"></i> DELETE TASK</button>
+            <button type="submit"><i class="fa-solid fa-plus"></i> ADD TASK</button>
         </div>
     </form>
 
-    <div id="list-box">
+    <form action="/delete" method="post">
+        <button type="submit"><i class="fa-solid fa-trash-can"></i> DELETE TASK</button>
 
-    </div>
+        <div id="list-box">
+            <% for(let i of todolist){ %> 
+                <div class="item">
+                    <input type="checkbox" name="check" value="<%=i.id%>">
+                    <label for="check"><%= i.description %></label>
+                </div>
+                <hr>
+            <% } %>
+        </div>
+
+    </form>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
