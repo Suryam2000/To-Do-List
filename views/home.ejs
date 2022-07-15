@@ -19,7 +19,7 @@
 
         <div id="description">
             <div>
-                <label for="description">DESCRIPTION</label>
+                <label for="description"><b>DESCRIPTION</b></label>
             </div>
             <div>
                 <input type="text" name="description" placeholder="What do you need to do?">
@@ -30,16 +30,16 @@
         <div id="container2">
             <div id="category-box">
                 <div>
-                    <label for="category">CATEGORY</label>
+                    <label for="category"><b>CATEGORY</b></label>
                 </div>
                 <div>
                     <select name="category" id="category">
                         <option value="Choose a Category">Choose a Category</option>
-                        <option value="personal">Personal</option>
-                        <option value="work">Work</option>
-                        <option value="school">School</option>
-                        <option value="cleaning">Cleaning</option>
-                        <option value="others">Others</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Others">Others</option>
                     </select>
                 </div>
             </div>
@@ -47,7 +47,7 @@
 
             <div id="date-box">
                 <div>
-                    <label for="date">DUE DATE</label>
+                    <label for="date"><b>DUE DATE</b></label>
                 </div>
                 <div>
                     <input type="date" name="date" id="date">
@@ -56,22 +56,36 @@
 
         </div>
 
-        <div id="buttons">
-            <button type="submit"><i class="fa-solid fa-plus"></i> ADD TASK</button>
+        <div class="buttons">
+            <button id="add-btn" type="submit"><i class="fa-solid fa-plus"></i> ADD TASK</button>
         </div>
     </form>
 
     <form action="/delete" method="post">
-        <button type="submit"><i class="fa-solid fa-trash-can"></i> DELETE TASK</button>
 
         <div id="list-box">
             <% for(let i of todolist){ %> 
                 <div class="item">
-                    <input type="checkbox" name="check" value="<%=i.id%>">
-                    <label for="check"><%= i.description %></label>
+                    <div class="item1">
+                        <input type="checkbox" name="check" value="<%=i.id%>">
+                    </div>
+                    <div class="item2">
+                        <div>
+                            <label for="check"><b><%= i.description %></b></label>
+                            <p id="date"><%= i.date %></p>
+                        </div>
+                        <div>
+                            <div id="list-category">
+                                <b><%= i.category %></b>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr>
             <% } %>
+        </div>
+
+        <div class="buttons">
+            <button id="del-btn" type="submit"><i class="fa-solid fa-trash-can"></i> DELETE TASK</button>
         </div>
 
     </form>
