@@ -8,6 +8,30 @@ body{
     justify-content: center;
 }
 
+
+/*  Color - Codes  */
+.Personal{
+    background-color: blueviolet;
+}
+
+.Work{
+    background-color: rgb(42, 187, 110);
+}
+
+.School{
+    background-color: rgb(219, 227, 49);
+}
+
+.Cleaning{
+    background-color: rgb(245, 142, 23);
+}
+
+.Others{
+    background-color: rgb(52, 60, 212);
+}
+
+
+/*             */
 #description{
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
@@ -64,7 +88,8 @@ button i{
 }
 
 #list-box{
-    border: 2px solid gray;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
 
 .item{
@@ -98,11 +123,11 @@ button i{
 }
 
 #list-category{
-    width: 60px;
-    border: 2px solid blue;
+    width: 70px;
     padding: 10px;
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 #add-btn{
