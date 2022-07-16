@@ -67,12 +67,12 @@
             <% for(let i of todolist){ %> 
                 <div class="item">
                     <div class="item1">
-                        <input type="checkbox" name="check" value="<%=i.id%>">
+                        <input type="checkbox" name="check" value="<%=i.id%>" id="lists">
                     </div>
                     <div class="item2">
                         <div>
-                            <label for="check"><b><%= i.description %></b></label>
-                            <p id="date"><%= i.date %></p>
+                            <label for="check"><h3><%= i.description %></h3></label>
+                            <p id="date"><i class="fa-solid fa-calendar-days"></i><%= i.date %></p>
                         </div>
                         <div>
                             <div id="list-category" class = "<%= i.category %>">
@@ -85,7 +85,7 @@
         </div>
 
         <div class="buttons">
-            <button id="del-btn" type="submit"><i class="fa-solid fa-trash-can"></i> DELETE TASK</button>
+            <button id="del-btn" type="submit"><i class="fa-solid fa-trash-can"></i> DELETE </button>
         </div>
 
     </form>

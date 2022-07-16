@@ -118,6 +118,10 @@ button i{
     align-items: center;
 }
 
+.item2 h3{
+    margin: 0px;
+}
+
 #date{
     font-size: 12px;
 }
@@ -138,4 +142,9 @@ button i{
 #del-btn{
     background-color: rgb(241, 59, 59);
     color: white;
+}
+
+.fa-calendar-days{
+    margin-right: 5px;
+    color: gray;
 }
