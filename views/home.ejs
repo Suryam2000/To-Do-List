@@ -7,12 +7,13 @@
     <title><%= title %></title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
     <div id="heading">
-        <h1>TODO App</h1>
+        <h1><i class="fa-solid fa-file-pen"></i>TODO App</h1>
     </div>
 
     <form action="/create_list" method="post">
@@ -22,7 +23,7 @@
                 <label for="description"><b>DESCRIPTION</b></label>
             </div>
             <div>
-                <input type="text" name="description" placeholder="What do you need to do?">
+                <input type="text" name="description" placeholder="What do you need to do?" required>
             </div>
         </div>
 
@@ -33,8 +34,7 @@
                     <label for="category"><b>CATEGORY</b></label>
                 </div>
                 <div>
-                    <select name="category" id="category">
-                        <option value="Choose a Category">Choose a Category</option>
+                    <select name="category" id="category" required>
                         <option value="Personal">Personal</option>
                         <option value="Work">Work</option>
                         <option value="School">School</option>
@@ -50,7 +50,7 @@
                     <label for="date"><b>DUE DATE</b></label>
                 </div>
                 <div>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" required>
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                     </div>
                     <div class="item2">
                         <div>
-                            <label for="check"><h3><%= i.description %></h3></label>
+                            <label for="check" class="strikethrough"><h3><%= i.description %></h3></label>
                             <p id="date"><i class="fa-solid fa-calendar-days"></i><%= i.date %></p>
                         </div>
                         <div>
