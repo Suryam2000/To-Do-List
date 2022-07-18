@@ -31,15 +31,25 @@ module.exports.createList = function(req, res){
 
 module.exports.deleteList = function(req, res){
     var id = req.body.check;
+    var checkArr = Array.isArray(id);
 
-    id.forEach(element => {
-        Todolist.findByIdAndDelete(element, function(err){
+    if(checkArr){
+        id.forEach(element => {
+            Todolist.findByIdAndDelete(element, function(err){
+                if(err){
+                    console.log('Error');
+                    return;
+                }
+            });
+        });
+    }
+    else{
+        Todolist.findByIdAndDelete(id, function(err){
             if(err){
                 console.log('Error');
                 return;
             }
         });
-    });
-
+    }
     res.redirect('back');
 };
